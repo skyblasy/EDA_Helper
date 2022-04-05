@@ -11,3 +11,7 @@ class EDA_Check:
     def naratio(self):
         result = df.isna().sum()/len(df)
         return result
+    
+    def nachart(self):
+        result = sns.heatmap(df.isnull(),yticklabels=False,cbar=False,cmap='crest')
+        return result
