@@ -19,3 +19,6 @@ class EDA_Check:
     def valueratio(self,value):
         result = df.eq(value).sum()/len(df)
         return result
+        
+    def valuechart(self,value):
+        sns.heatmap(df.eq(value),yticklabels=False,cbar=False,cmap="mako")
