@@ -15,3 +15,7 @@ class EDA_Check:
     def nachart(self):
         result = sns.heatmap(df.isnull(),yticklabels=False,cbar=False,cmap='crest')
         return result
+    
+    def valueratio(self,value):
+        result = df.eq(value).sum()/len(df)
+        return result
